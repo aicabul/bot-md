@@ -58,8 +58,7 @@ inrl({
 				title,
 				thumbnail
 			} = await getYTInfo(result[0]);
-		        let qu = seconds<1800?"360p":"144p";
-			const ress = await downloadMp3(result[0],qu);
+		        const ress = await downloadMp3(result[0]);
 			const AudioMeta = await AudioMetaData(await toAudio(ress),{title,image:thumbnail});
 			return await message.client.sendMessage(message.from, {
 				document: AudioMeta,
@@ -77,8 +76,7 @@ inrl({
 				title,
 				thumbnail
 			} = await getYTInfo(result[0]);
-		        let qu = seconds<1800?"360p":"144p";
-			const ress = await downloadMp3(result[0],qu);
+		        const ress = await downloadMp3(result[0]);
 			const AudioMeta = await AudioMetaData(await toAudio(ress),{title,image:thumbnail});
 			return await message.client.sendMessage(message.jid, {
 				audio: AudioMeta,
@@ -96,8 +94,7 @@ inrl({
 				title,
 				thumbnail
 			} = await getYTInfo(result[0]);
-		        let qu = seconds<1800?"360p":"144p";
-			const ress = await downloadMp4(result[0],qu);
+		        const ress = await downloadMp4(result[0]);
 			return await message.client.sendMessage(message.from, {
 				document: ress,
 				mimetype:  'video/mp4',
@@ -114,8 +111,7 @@ inrl({
 				title,
 				thumbnail
 			} = await getYTInfo(result[0]);
-		        let qu = seconds<1800?"360p":"144p";
-			const ress = await downloadMp4(result[0], qu);
+		        const ress = await downloadMp4(result[0]);
 			return await message.client.sendMessage(message.from, {
 				video: ress,
 				mimetype: 'video/mp4',
