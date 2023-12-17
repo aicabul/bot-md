@@ -16,7 +16,7 @@ inrl({
 	pattern: 'play',
 	type: "downloader",
 	desc: lang.YT.PLAY_DESC
-}, async (m, match) => {
+}, async (message, match) => {
 	match = match || message.reply_message.text;
 		if (!match) return await message.send(lang.YT.NEED_TEXT);
 		const url = await extractUrlsFromString(match);
