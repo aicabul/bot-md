@@ -1,16 +1,6 @@
 const {
-	inrl,
-	sleep,
-	extractUrlsFromString,
-	searchYT,
-	downloadMp3,
-	downloadMp4,
-	lang,
-	getYTInfo,
-	getBuffer,
-	AudioMetaData,
-	toAudio,
-	config
+	inrl,sleep,extractUrlsFromString,searchYT,downloadMp3,downloadMp4,
+	lang,getYTInfo,getBuffer,AudioMetaData,toAudio,config
 } = require('../lib');
 
 
@@ -82,7 +72,7 @@ inrl({
 	on: "text"
 }, async (message, match) => {
 	const video_reg = new RegExp(lang.YT.INFO_VIDEO, "gi");
-	const song_reg = new RegExp(lib.lang.YT.INFO_SONG, "gi");
+	const song_reg = new RegExp(lang.YT.INFO_SONG, "gi");
 	if (message.body.match(video_reg)) {
 		match = message.body.replace(video_reg, "").trim();
 		await message.send(lang.BASE.DOWNLOAD.format(match));
