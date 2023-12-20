@@ -35,7 +35,12 @@ inrl({
 			image: thumbnail
 		});
 		return await message.send(AudioMeta, {
-			mimetype: 'audio/mpeg'
+			mimetype: 'audio/mpeg',
+			linkPreview: {
+				mediaType: 2,
+				title,
+				thumbnailUrl: thumbnail
+			}
 		}, 'audio');
 	}
 });
@@ -99,7 +104,12 @@ inrl({
 			image: thumbnail
 		});
 		return await message.send(AudioMeta, {
-			mimetype: 'audio/mpeg'
+			mimetype: 'audio/mpeg',
+			linkPreview: {
+				mediaType: 2,
+				title,
+				thumbnailUrl: thumbnail
+			}
 		}, 'audio');
 	}
 });
