@@ -1,6 +1,6 @@
 {
   "name": "inrl-bot-md",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "description": "WhatsApp bot made with nodejs and baileys",
   "main": "index.js",
   "scripts": {
