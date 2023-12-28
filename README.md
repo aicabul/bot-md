@@ -61,6 +61,8 @@ cd inrl-bot-md
 npm i
 npm start
 ```
+- [source](https://github.com/inrl-official/inrl-bot-md)
+
 
 ### EXTERNAL PLUGINS
 
